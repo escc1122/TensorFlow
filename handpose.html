@@ -130,6 +130,7 @@
 
 						if (handInViewConfidence<0.999){
 							console.log("準確度不夠");
+							return;
 						}
 
 						let annotations = predictions[i].annotations;
