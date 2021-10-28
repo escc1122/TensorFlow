@@ -153,14 +153,19 @@
 						let c3 = checkFinger(middleFinger,palmBase);
 						let c4 = checkFinger(ringFinger,palmBase);
 						let c5 = checkFinger(pinky,palmBase);
-
+						let c6 = false;
+						if (pinky[0][0]>ringFinger[0][0] && ringFinger[0][0]>middleFinger[0][0] && middleFinger[0][0]>indexFinger[0][0]){
+							c6 = true;
+						}
 						console.log("thumb " + c1);
 						console.log("indexFinger " + c2);
 						console.log("middleFinger " + c3);
 						console.log("ringFinger " + c4);
 						console.log("pinky " + c5);
+						console.log("c6 " + c6);
+						console.log("length " + palmBase[0][1] - middleFinger[3][1]);
 	
-						if (c2 && c3 && c4 && c5) {
+						if (c2 && c3 && c4 && c5 && c6) {
 							getFrameFromVideo(video, myCanvas);
 						}
 					}
